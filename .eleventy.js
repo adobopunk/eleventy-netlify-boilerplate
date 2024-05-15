@@ -103,10 +103,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
   //adding dateToRfc3339 filter
-  eleventyConfig.addFilter("dateToRfc3339", function (date) {
-    const formattedDate = date.toISOString().replace(/[:\-]|\.\d{3}/g, "");
-    return formattedDate;
-  });
+  // eleventyConfig.addFilter("dateToRfc3339", function (date) {
+  //   const formattedDate = date.toISOString().replace(/[:\-]|\.\d{3}/g, "");
+  //   return formattedDate;
+  // });
 
   return {
     templateFormats: ["md", "njk", "liquid"],
