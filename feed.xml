@@ -1,0 +1,21 @@
+---
+permalink: "feed.xml"
+eleventyExcludeFromCollections: true
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ title }}</title>
+  <link href="/index.html" />
+  <updated>{{ rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.url }}</id>
+  {{# collections.all }}
+    <entry>
+      <title>{{ title }}</title>
+      <link href="{{ url }}" />
+      <id>{{ id }}</id>
+      <updated>{{ date }}</updated>
+      <content type="html">{{ content | htmlToAbsoluteUrls }}</content>
+    </entry>
+  {{/ collections.all }}
+</feed>

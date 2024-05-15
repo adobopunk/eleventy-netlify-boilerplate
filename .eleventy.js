@@ -3,6 +3,8 @@ const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 
 module.exports = function(eleventyConfig) {
 
@@ -116,4 +118,7 @@ module.exports = function(eleventyConfig) {
       output: "_site"
     }
   };
+
+  //adding RSS plugin from https://www.11ty.dev/docs/plugins/rss/
+  eleventyConfig.addPlugin(pluginRss);
 };
