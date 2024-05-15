@@ -1,5 +1,13 @@
 {
   "title": "Eleventy Netlify Boilerplate",
   "description": "A template for building a simple blog website with the Eleventy static site generator, Decap CMS, and with deployment to Netlify.",
-  "url": "https://bejewelled-cocada-fc79b3.netlify.app/"
+  "url": "https://bejewelled-cocada-fc79b3.netlify.app/",
+
+  "feed": {
+		"subtitle": "A  template for building a simple blog website with the Eleventy static site generator, Decap CMS, and with deployment to Netlify.",
+		"filename": "feed.xml",
+		"path": "/feed/feed.xml",
+		"url": "https://bejewelled-cocada-fc79b3.netlify.app/feed.xml",
+		"id": "hhttps://bejewelled-cocada-fc79b3.netlify.app/"
+	}
 }

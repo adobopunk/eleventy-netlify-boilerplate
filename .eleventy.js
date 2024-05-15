@@ -99,6 +99,15 @@ module.exports = function(eleventyConfig) {
     .use(markdownItAnchor, opts)
   );
 
+  //adding RSS plugin from https://www.11ty.dev/docs/plugins/rss/
+  eleventyConfig.addPlugin(pluginRss);
+
+  //adding dateToRfc3339 filter
+  eleventyConfig.addFilter("dateToRfc3339", function (date) {
+    const formattedDate = date.toISOString().replace(/[:\-]|\.\d{3}/g, "");
+    return formattedDate;
+  });
+
   return {
     templateFormats: ["md", "njk", "liquid"],
 
@@ -118,7 +127,4 @@ module.exports = function(eleventyConfig) {
       output: "_site"
     }
   };
-
-  //adding RSS plugin from https://www.11ty.dev/docs/plugins/rss/
-  eleventyConfig.addPlugin(pluginRss);
 };
