@@ -1,7 +1,7 @@
 :root {
 	--primary: rgb(165, 49, 41);
 	--secondary: white;
-	--background: rgb(219, 219, 219);
+	--background: rgb(238, 238, 238);
 }
 
 *, *:before, *:after {
